@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.UUID;
+import java.util.Random;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please Enter a string to continue: ");
+        String input = scanner.nextLine();
+
+        // Remove spaces and convert to lower case
+        input = input.replaceAll("\\s+", "").toLowerCase();
+
+        // Check if the string is a palindrome
+        if (isPalindrome(input)) {
+            System.out.println("THE ENTERED STRING IS PALINDROME");
+        } else {
+            System.out.println("THE ENTERED STRING IS NOT PALINDROME");
+        }
+
+        scanner.close();
+    }
+
+    public static boolean isPalindrome(String str) {
+
+        String reversed = new StringBuilder(str).reverse().toString();
+        return str.equals(reversed);
+
+
+
+
+
+
+
+
+
+    }
+}
